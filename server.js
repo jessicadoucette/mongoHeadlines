@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/jd-mongoose-scrap";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongolab-lively-96863";
 
 mongoose.connect(MONGODB_URI);
 
