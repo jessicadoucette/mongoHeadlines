@@ -1,0 +1,58 @@
+.jumbotron {
+	background: url(../images/branden-harvey-362090-unsplash.jpg);
+	background-position: center;
+	background-size: cover;
+	color: #e0cd1b;
+	border-radius: 0px; 
+	padding: 100px 0 80px 0; 
+}
+
+.index-h1 {
+	font-size: 90px;
+	padding: 40px 0 10px;
+}
+
+.btn {
+	border: 0 none;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #e0cd1b !important;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+	outline: 0 none;
+}
+
+.btn-primary {
+	background: white !important;
+	color: #e0cd1b !important;
+	padding: 15px 100px;
+}
+
+/* .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+	background: #365a57 !important;
+	color: #b78e53 !important;
+} */
+
+.btn-primary:hover {
+		 background: #AD0449 !important;
+color: white !important;
+}
+
+.btn-primary:active, .btn-primary.active {
+	background: #007299;
+	box-shadow: none;
+}
+
+.subhead {
+	width: 70%;
+	margin: 0 auto;
+	color: #f9f9f9;
+	padding-bottom: 30px;
+}
+
+.list-group-item {
+	font-size: 24px;
+}
+
+

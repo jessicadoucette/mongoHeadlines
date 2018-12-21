@@ -1,42 +1,45 @@
 var express = require("express");
 var expressHandlebars = require("express-handlebars");
-var mongoose = require("mongoose");
-var axios = require("axios");
-var cheerio = require("cheerio");
 var bodyParser = require("body-parser");
-var logger = require("morgan");
+var mongoose = require("mongoose");
+var routes = require("./routes");
+
+
 
 var PORT = process.env.PORT || 3000;
 
-// Initialize Express
 var app = express();
 
-var router = express.Router();
+// var routes = express.Router();
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static('public'));
+// Handlebars
+app.engine(
+	'handlebars',
+	expressHandlebars({
+		defaultLayout: 'main'
+	})
+);
+app.set('view engine', 'handlebars');
 
-app.engine("handlebars", expressHandlebars({defaultLayout: "main"}))
-app.set("view engine", "handlebars");
+app.use(bodyParser.urlencoded({
+	extended: false
+}))
 
-app.use(router);
+//api and views in routes
+app.use(routes);
 
-// Configure middleware
-
-// Use morgan logger for logging requests
-app.use(logger("dev"));
-// Parse request body as JSON
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-// Make public a static folder
-app.use(express.static("public"));
-
-// Connect to the Mongo DB
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongolab-defined-4411";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 mongoose.connect(MONGODB_URI);
 
 
+// mongoose.connect("mongodb://localhost/mongolab-defined-4411", { useNewUrlParser: true });
+
+
+
 
 app.listen(PORT, function() {
-	console.log("Listening on Port: " + PORT); 
-})
+	console.log("Listening on port: " + PORT); 
+});
+

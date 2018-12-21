@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/styles.css">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	
+	<title>Mongo FiveThirtyEight Scrapper</title>
+</head>
+<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" href="#">Mongo FiveThirtyEight Scrapper</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Saved Articles</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+	<div class="jumbotron text-center">
+		
+		<h1 class="index-h1">Mongo FiveThirtyEight Scrapper</h1>
+		<div class="subhead">
+		<h2 class="col-4-lg">Get the latest digits, opinion poll analysis, politics, economics, and sports blogging, all right here on Mongo FiveThirtyEight Scrapper.</h2>
+	</div>
+		<br>
+		<a class="btn btn-primary btn-lg scrapeBtn" role="button" aria-pressed="true">SCRAPE NEW ARTICLES</a>
+	</div>
+	
+	<container class="col-8-lg row justify-content-lg-center">
+		
+      <div id="articles">
+					<ul class="list-group">
+						
+						</ul>
+			</div>
+      <div id="notes"></div>
+    </container>
+	
+		
+		<script src="./app.js"></script>
+	
+</body>
+</html>
