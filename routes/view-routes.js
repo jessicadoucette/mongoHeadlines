@@ -5,6 +5,11 @@ router.get("/home", function (req, res) {
 	res.render("home")
 });
 
+router.get("/saved", function (req, res) {
+	console.log("saved view")
+	res.render("saved")
+});
+
 
 
 

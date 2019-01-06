@@ -1,3 +1,8 @@
+html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
 .jumbotron {
 	background: url(../images/branden-harvey-362090-unsplash.jpg);
 	background-position: center;
@@ -34,7 +39,8 @@
 	color: #b78e53 !important;
 } */
 
-.btn-primary:hover {
+.btn-primary:hover,
+.saveArticleBtn:hover {
 		 background: #AD0449 !important;
 color: white !important;
 }
@@ -55,4 +61,14 @@ color: white !important;
 	font-size: 24px;
 }
 
+.list-group {
+	padding-bottom: 40px;
+}
 
+.saveArticleBtn {
+	margin-left: 20px;
+	padding: 7px 20px;
+	color: white !important;
+	background-color: #e0cd1b !important;
+	float:right; 
+}

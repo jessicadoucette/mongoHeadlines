@@ -7,6 +7,7 @@ var articles = require("../models/Article");
 
 router.use("/api", apiRoutes);
 router.use("/", viewRoutes);
+router.use("/saved", viewRoutes);
 router.use("/articles", articles);
 
 
